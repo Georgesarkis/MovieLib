@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "2adf3daf-b224-4258-b4cc-21fe4f439d91",
+		"name": "movielb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE a movie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35cf546c-1bbd-4f7f-ac5f-75048579ee14",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"Movie\", responseBody.replace(/\"/g,''));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ReleaseYear\" : 1999,\n    \"MovieTitle\" : \"Fight Club\",\n\t\"PlotDescription\" : \"An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.\",\n\t\"Director\"  : \"David Fincher\",\n\t\"Trailer\": \"https://www.imdb.com/video/imdb/vi781228825?playlistId=tt0137523&ref_=tt_ov_vi\",\n\t\"MainPoster\" : \"https://www.imdb.com/title/tt0137523/mediaviewer/rm590641920?ref_=tt_ov_i\",\n\t\"MainActors\" :  [ \"Brad Pitt\", \"Edward Norton\", \"Meat Loaf\"] \n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/admin/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"admin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE a movie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "325aa58e-a19f-47c1-bb36-c299920359a6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ReleaseYear\" : 1993,\n    \"MovieTitle\" : \"The Shawshank Redemption\",\n\t\"PlotDescription\" : \"An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.\",\n\t\"Director\"  : \"David Fincher\",\n\t\"Trailer\": \"https://www.imdb.com/video/imdb/vi781228825?playlistId=tt0137523&ref_=tt_ov_vi\",\n\t\"MainPoster\" : \"https://www.imdb.com/title/tt0137523/mediaviewer/rm590641920?ref_=tt_ov_i\",\n\t\"MainActors\" :  [ \"Brad Pitt\", \"Edward Norton\", \"Meat Loaf\"] \n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/admin/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"admin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE a movie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18f88b5b-7f6f-4127-a215-3d4dc82ffa4b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ReleaseYear\" : 2003,\n    \"MovieTitle\" : \"Spider Man\",\n\t\"PlotDescription\" : \"An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.\",\n\t\"Director\"  : \"David Fincher\",\n\t\"Trailer\": \"https://www.imdb.com/video/imdb/vi781228825?playlistId=tt0137523&ref_=tt_ov_vi\",\n\t\"MainPoster\" : \"https://www.imdb.com/title/tt0137523/mediaviewer/rm590641920?ref_=tt_ov_i\",\n\t\"MainActors\" :  [ \"Brad Pitt\", \"Edward Norton\", \"Meat Loaf\"] \n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/admin/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"admin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a movie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1445a560-a69a-4e58-8f4a-646ac85814e0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/{{Movie}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"{{Movie}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/api/movies/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all movies sorted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/api/movies?sort=+MovieTitle",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "+MovieTitle"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE a review for a movie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b42af4a3-b6b0-4d99-811d-7f47e23e6418",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"Review\", responseBody.replace(/\"/g,''));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Rating",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "ReviewText",
+							"value": "Excellent",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "TerminatorCry",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/{{Movie}}/review",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"{{Movie}}",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/api/reviews/{{Review}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"{{Review}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH a movie",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ReleaseYear\": 1988,\n\t\"MainActors\": [\"Laura\", \"banana\"],\n\t\"MovieTitle\": \"Banana\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/admin/{{Movie}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"admin",
+						"{{Movie}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH a review",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Rating",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ReviewText",
+							"value": "banana",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "Banana",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/reviews/{{Review}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"{{Review}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all reviews for a movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/{{Movie}}/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"{{Movie}}",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/api/reviews/{{Review}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"{{Review}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/admin/{{Movie}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"admin",
+						"{{Movie}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
